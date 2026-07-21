@@ -1,0 +1,42 @@
+# Query: '/'
+# ContextLines: 1
+
+8 resultados - 6 arquivos
+
+src/config/filesystems.php:
+  43              'root' => storage_path('app/public'),
+  44:             'url' => rtrim(env('APP_URL', 'http://localhost'), '/').'/storage',
+  45              'visibility' => 'public',
+
+src/config/session.php:
+  145  
+  146:     'path' => env('SESSION_PATH', '/'),
+  147  
+
+src/resources/views/partials/rodape.blade.php:
+  10        </address>
+  11:       <a href="{{ route ('home')}}">Mapa</a>
+  12      </div>
+
+  40  
+  41:       <a href="{{ route ('home')}}" class="btn">Reserva</a>
+  42      </div>
+
+  45        <p>Informe seu email para receber as novidades e promções da Casa do Barista</p>
+  46:       <form action="{{ route ('home')}}" method="post">
+  47          <label for="email">Inscreva-se</label>
+
+src/resources/views/site/home/cardapio.blade.php:
+  85      <div class="site btn-cardapio">
+  86: <a class="btn" href="{{ route ('home')}}">Veja Mais</a>
+  87  </div>
+
+src/routes/web.php:
+  5  
+  6: Route::get('/', [HomeController::class, 'home'])->name('home');
+  7  
+
+src/tests/Feature/ExampleTest.php:
+  14      {
+  15:         $response = $this->get('/');
+  16  
