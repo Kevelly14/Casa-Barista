@@ -9,7 +9,7 @@ class SobreController extends Controller
 
     public function sobre(){
 
-    return view('site,sobre.sobre');
+    return view('site.sobre.sobre');
 
     }
 

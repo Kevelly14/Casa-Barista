@@ -9,7 +9,7 @@ class EventosController extends Controller
 
     public function eventos(){
 
-    return view('site,eventos.eventos');
+    return view('site.eventos.eventos');
 
     }
 

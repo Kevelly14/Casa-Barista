@@ -6,7 +6,7 @@
   @include('site.cardapio.cont-cardapio')
 
   <!-- INÍCIO DA SESSÃO GALERIA -->
-  @include('site.home.galeria')
+  @include('site.cardapio.galeria')
       
       
 

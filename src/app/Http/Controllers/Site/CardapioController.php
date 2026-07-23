@@ -9,7 +9,7 @@ class CardapioController extends Controller
 
     public function cadapio(){
 
-    return view('site,cardapio.cardapio');
+    return view('site.cardapio.cardapio');
 
     }
 
