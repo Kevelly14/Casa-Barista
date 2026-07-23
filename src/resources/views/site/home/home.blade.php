@@ -4,7 +4,6 @@
 
 <!-- INÍCIO BANNER -->
 @include('site.home.banner')
-<!-- FIM BANNER -->
 
   <!-- Sessão Bem-Vindo -->
   @include('site.home.bemvindo')
