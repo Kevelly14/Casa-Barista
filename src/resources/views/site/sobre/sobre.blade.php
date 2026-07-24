@@ -3,13 +3,13 @@
 @section('content')
 
   <!-- Sessão Bem-Vindo -->
-   @include('site.home.bemvindo')
+   @include('site.sobre.bemvindo')
   
   <!-- INÍCIO DA SESSÃO EQUIPE -->
-   @include('site.home.equipe')
+   @include('site.sobre.equipe')
 
   <!-- INÍCIO DA SESSÃO DEPOIMENTOS -->
-  @include('site.home.depoimento')
+  @include('site.sobre.depoimento')
 
 
 @endsection

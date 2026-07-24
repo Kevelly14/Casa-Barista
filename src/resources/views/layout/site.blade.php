@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
+
    // Aqui entra o partial de head
    @include('partials.head')
 
-</head>
+
 
 <body>
 
