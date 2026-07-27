@@ -16,7 +16,7 @@
       <h3>Faça sua reserva</h3>
       <div class="linha-box">
       <hr>
-      <img src="{{ asset ('barista/asset/coffee.1.svg')}}" alt="Faça sua reserva">
+      <img src="{{ asset ('barista/assets/coffee.1.svg')}}" alt="Faça sua reserva">
       <hr>
       </div>
       <ul>
@@ -70,8 +70,8 @@
                 </li>
                 
                 <li><a href="#" target="_blank">
-                    <img src="{{ asset ('barista/assets/linkedin-24 (1).png')}}" alt="Logo LinkedIn - Casa do Barista"></a><
-                    /li>
+                    <img src="{{ asset ('barista/assets/linkedin-24 (1).png')}}" alt="Logo LinkedIn - Casa do Barista"></a>
+                </li>
 
                 <li><a href="https://wa.me/551199999999" target="_blank">
                     <img src="{{ asset ('barista/assets/whatsapp-24.png')}}" alt="Logo WhatsApp - Casa do Barista"></a>

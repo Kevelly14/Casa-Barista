@@ -29,16 +29,16 @@
 
              <!-- LOGIN -->
             <a href="#" class="login">
-              <img src="assets/login.png" alt="Login Casa do Barista">
+              <img src="{{ asset ('barista/assets/login.png') }}" alt="Login Casa do Barista">
             </a>
 
              <!-- Rede Social | ul>li*3>a>img -->
           
     
             <ul class="redeSocial">
-                <li><a href="https://www.facebook.com/senacsaomiguelpaulista" target="_blank"><img src="assets/facebook-24.png" alt="Logo Facebook - Casa do Barista"></a></li>
-                <li><a href="https://www.instagram.com/senacsaomiguelpaulista" target="_blank"><img src="assets/instagram-24.png" alt="Logo Instagram - Casa do Barista"></a></li>
-                <li><a href="https://wa.me/551199999999" target="_blank"><img src="assets/whatsapp-24.png" alt="Logo WhatsApp - Casa do Barista"></a></li>
+                <li><a href="https://www.facebook.com/senacsaomiguelpaulista" target="_blank"><img src="{{ asset ('barista/assets/facebook-24.png') }}" alt="Logo Facebook - Casa do Barista"></a></li>
+                <li><a href="https://www.instagram.com/senacsaomiguelpaulista" target="_blank"><img src="{{ asset ('barista/assets/instagram-24.png') }}" alt="Logo Instagram - Casa do Barista"></a></li>
+                <li><a href="https://wa.me/551199999999" target="_blank"><img src="{{ asset ('barista/assets/whatsapp-24.png') }}" alt="Logo WhatsApp - Casa do Barista"></a></li>
             </ul>
       
          </nav>
