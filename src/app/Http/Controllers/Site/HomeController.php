@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\Banner;
+use App\Models\Depoimento;
 
 class HomeController extends Controller{
 
@@ -20,7 +21,15 @@ class HomeController extends Controller{
     //var_dump($listaBanner);
 
 
-    return view('site.home.home', compact('listaBanner'));
+    //Buscar os depoimentos APROVADO junto com os dados dos clientes
+    $listaDepo = Depoimento::with('DepoimentoCliente')
+                            ->where('status_depoimento', 'APROVADO')
+                            ->orderByDesc('id_depoimento')
+                            ->get();
+    //dd($listaDepo->toArray());
+
+
+    return view('site.home.home', compact('listaBanner', 'listaDepo'));
 
     }
 

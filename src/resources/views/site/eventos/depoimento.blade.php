@@ -19,7 +19,8 @@
                   </div>
 
                   <div class="dadosDepo">
-                    <p>Participar do Workshop de Métodos foi uma experiência incrível. Aprendi na prática como cada técnica influencia no sabor e saí de lá preparando meu café com muito mais confiança.</p>
+                    <p>Participar do Workshop de Métodos foi uma experiência incrível. Aprendi na prática 
+                      como cada técnica influencia no sabor e saí de lá preparando meu café com muito mais confiança.</p>
                     <img src="{{ asset ('barista/assets/depo.jpg') }}" alt="Foto Depoimento">
                     <h4>Mariana Alves</h4>
                     <div>
@@ -43,7 +44,8 @@
                   </div>
 
                   <div class="dadosDepo">
-                    <p>A Noite do Café Especial superou minhas expectativas. Foi uma verdadeira imersão sensorial, com aromas e sabores que eu nunca tinha experimentado antes.</p>
+                    <p>A Noite do Café Especial superou minhas expectativas. Foi uma verdadeira imersão sensorial, 
+                      com aromas e sabores que eu nunca tinha experimentado antes.</p>
                     <img src="{{ asset ('barista/assets/depo.jpg') }}" alt="Foto Depoimento">
                     <h4>Ricardo Mendes</h4>
                     <div>
@@ -130,3 +132,4 @@
 
             </div>
             </section>
+
