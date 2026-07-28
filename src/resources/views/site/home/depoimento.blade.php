@@ -25,20 +25,21 @@
                  <article>
                     <div class="estrela">
                         <ul>
-                            @for($i = 1; <= 5; $i++)
+
+                        @for($i = 1; $i <= 5; $i++)
                             <li class="{{ $i <= $estrela ? 'estrela-ativa' : 'estrela-inativa' }}">
-                                <img src="{{ asset ('barista/assets/estrela.png') }}" alt="{{ $i <= $estrela ? 'Estrela preenchida'  }}">
+                                 <img src="{{ asset('barista/assets/estrela.png') }}" alt="{{ $i <= $estrela ? 'Estrela preenchida' : 'Estrela não preenchida'}}">
                             </li>
                             @endfor
                         </ul>
                     </div>
                     <div class="dadosDepo">
                         <p>{{$linha->descricao_depoimento}}</p>
-                        <img src="{{ asset ('barista/assets/'. $cliente->foto_cliente)}}" alt="{{ $cliente->nome_cliente }}">
-                        <h4>{{ $cliente->nome_cliente }}</h4>
+                          <img src="{{ asset('barista/assets/'. $cliente->foto_cliente)}}" alt="{{ $cliente->nome_cliente }}">
+                    <h4>{{ $cliente->nome_cliente }}</h4>
                         <div>
-                            <h5>Data: {{ $linha->data_criacao_depoimento ? $linha->data_criacao_depoimento->format('d/m/Y') : 'Data não informada'}}</h5>
-                            <h5>{{ $linha->titulo_depoimento }}</h5>
+                           <h5>Data: {{ $linha->data_criacao_depoimento ? $linha->data_criacao_depoimento->format('d/m/Y') : 'Data não informada'}}</h5>
+                           <h5>{{ $linha->titulo_depoimento }}</h5>
                         </div>
                     </div>
 
