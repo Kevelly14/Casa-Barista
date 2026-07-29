@@ -4,7 +4,7 @@
               <h3>Nada nos inspira mais do que ouvir a experiência de quem passa por aqui </h3>
             </header>
 
-          <div class="site itensDepo">
+        <div class="site itensDepo">
                 
               <!-- DEPO 01 -->
               @forelse ($listaDepo as $linha)
@@ -35,20 +35,20 @@
                     </div>
                     <div class="dadosDepo">
                         <p>{{$linha->descricao_depoimento}}</p>
-                          <img src="{{ asset('barista/assets/'. $cliente->foto_cliente)}}" alt="{{ $cliente->nome_cliente }}">
-                    <h4>{{ $cliente->nome_cliente }}</h4>
+                          <img src="{{ asset("barista/assets/$cliente->foto_cliente")}}" alt="{{ $cliente->nome_cliente }}">
+                        <h4>{{ $cliente->nome_cliente }}</h4>
                         <div>
                            <h5>Data: {{ $linha->data_criacao_depoimento ? $linha->data_criacao_depoimento->format('d/m/Y') : 'Data não informada'}}</h5>
                            <h5>{{ $linha->titulo_depoimento }}</h5>
                         </div>
                     </div>
 
-                    
+                </article> 
               @empty
                     
               @endforelse
                
                 
 
-          </div>
+        </div>
   </section>

@@ -5,17 +5,9 @@
             </header>
 
             <div class="itensGaleria slideGaleria">
-              <img src="{{ asset ('barista/assets/galeria1.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria2.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria3.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria4.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria5.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria6.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria1.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria2.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria3.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria4.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria5.jpg') }}" alt="Galeria - Casa do Barista">
-              <img src="{{ asset ('barista/assets/galeria6.jpg') }}" alt="Galeria - Casa do Barista">
+              @foreach($listaGaleria as $linha)
+              <img src="{{ asset ("barista/assets/$linha->imagem_galeria") }}" alt="{{ $linha->nome_galeria }}">
+              @endforeach
+            
             </div>
-          </section>
+</section>

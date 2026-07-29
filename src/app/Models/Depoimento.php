@@ -13,8 +13,8 @@ protected $primaryKey = 'id_depoimento';
 
 public $timestamps = true;
 
-const CREATE_AT = 'data_criacao_depoimento';
-const UPDATE_AT = 'data_atualizacao_depoimento';
+const CREATED_AT = 'data_criacao_depoimento';
+const UPDATED_AT = 'data_atualizacao_depoimento';
 
 protected $fillable = [
     'id_cliente',
