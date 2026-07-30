@@ -28,7 +28,7 @@
       <article>
         <h5>2010</h5>
         <h4>FRANQUIAS</h4>
-        <img src="{{ asset ('barista/assets/coffee.svg')" alt="Casa do Barista - Franquias">
+        <img src="{{ asset ('barista/assets/coffee.svg') }}" alt="Casa do Barista - Franquias">
         <p>Receitas feitas para harmonizar com os cafés, com foco em ingredientes frescos e artesanais.</p>
       </article>
     </div>
