@@ -23,7 +23,7 @@ protected $fillable = [
 // um produto pentence a uma categoria
 
 public function produtos(){
-    return $this->belongsTo(Produto::class, 'id_categoria', 'id_categoria');
+    return $this->hasMany(Produto::class, 'id_categoria', 'id_categoria');
 }
 
 

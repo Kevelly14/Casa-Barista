@@ -7,6 +7,4 @@
 
 @include('site.contato.cont-contato')
 
-@include('site.contato.mapa')
-
 @endsection

@@ -8,10 +8,11 @@ use App\Models\Produto;
 class CardapioController extends Controller
 {
 
-    public function cadapio(?int $idCategoria = null){
+    public function cardapio(?int $idCategoria = null){
 
     $listaCategoria = Categoria::where('status_categoria', 'ATIVO')
-    ->orderBy('nome_categoria')->get();
+    ->orderBy('nome_categoria')
+    ->get();
 
     //SE nennhuma categoria estiver na URL 
     if($idCategoria === null){
@@ -28,6 +29,8 @@ class CardapioController extends Controller
     $listaProduto = Produto::where('status_produto', 'ATIVO')
     ->orderBy('nome_produto')
     ->get();
+    
+    //dd($listaProduto);
 
     $produtos = Produto::query()
     ->where('id_categoria', $categoriaSelecionada->id_categoria)

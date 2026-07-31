@@ -3,5 +3,4 @@
       <img src="{{ asset ("barista/assets/$linha->imagem_banner") }}" alt="{{ $linha->titulo_banner }}">  
     @endforeach
   
-  
   </section>

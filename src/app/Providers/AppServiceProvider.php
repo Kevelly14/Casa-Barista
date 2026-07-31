@@ -28,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
         ->orderBy('nome_categoria')
         ->get();
 
+        //dd($categoriaMenu);
         $view->with('categoriaMenu', $categoriaMenu);
 
 

@@ -6,11 +6,18 @@
      <header class="parallax-padrao wow animate__animated animate__fadeInUp">
        <h2>CARDÁPIO | {{ $categoriaSelecionada->nome_categoria }}</h2>
 
-       <nav>
+       <nav class="menu-categorias">
            <ul>
                 @foreach ($listaCategoria as $linha)
                 <li>
-                    <a href="{{ route ('cardapio.categoria',$linha->id_categoria) }}">{{ $linha->nome_categoria}}</a>
+                    <a href="{{ route ('cardapio.categoria',$linha->id_categoria) }}"
+                        class="{{
+                                $categoriaSelecionada->id_categoria == $linha->id_categoria
+                                        ? 'categoria-ativa'
+                                        : ''
+                                }}"
+                                >{{ $linha->nome_categoria}}
+                    </a>
                 </li>
                 @endforeach
            </ul>
@@ -20,7 +27,7 @@
 
   <div class="site card-cardapio">
 
-    @foreach ($produtos as )
+    @foreach ($produtos as $linha)
         
     <div class="card-flip">
     <article class="card-flip-miolo">
