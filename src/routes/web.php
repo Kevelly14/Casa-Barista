@@ -1,13 +1,12 @@
 <?php
 
-
 use App\Http\Controllers\Site\CardapioController;
 use App\Http\Controllers\Site\ContatoController;
 use App\Http\Controllers\Site\EventosController;
 use App\Http\Controllers\Site\HomeController;
 use App\Http\Controllers\Site\SobreController;
 
-use App\Http\Controllers\Dash\DashController;
+use App\Http\Controllers\Admin\AdminController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +24,5 @@ Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
 
 
 //Conteúdo do DASHBOARD
-Route::get('/dash', [DashController::class, 'dash'])->name('dash');
+//Estrutura para a área adminstrativa
+Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
