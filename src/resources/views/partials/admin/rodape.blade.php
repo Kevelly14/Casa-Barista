@@ -1,12 +1,12 @@
  <footer class="app-footer">
         <!--begin::To the end-->
-        <div class="float-end d-none d-sm-inline">Anything you want</div>
+        <div class="float-end d-none d-sm-inline">Senac São Miguel Paulista</div>
         <!--end::To the end-->
         <!--begin::Copyright-->
         <strong>
-          Copyright &copy; 2014-2026&nbsp;
-          <a href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
+          Criado e desenvolvido por TIPI06 - ©2026
+          <a href="https://adminlte.io" class="text-decoration-none">CASA DO BARISTA</a>.
         </strong>
-        All rights reserved.
+        Todos os direitos reservados.
         <!--end::Copyright-->
       </footer>

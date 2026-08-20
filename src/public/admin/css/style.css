@@ -1,7 +1,75 @@
+
+/*
+========================
+FONTES GOOGLE E LOCAL
+========================
+*/
+
+/* GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* LOCAL */
+@font-face {
+    font-family: "Geomerry Soft Pro-Bold N";
+src: url(../fonts/Geometry\ Soft\ Pro-Bold\ N.otf) format("opentype");
+font-weight: 700;
+font-style: normal;
+
+}
+
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root{
+    --cor-fundo-1: #f4ebdb;
+    --cor-secundaria-1:#8b5e3c;
+    --cor-secundaria-2:#b56a34;
+
+
+    --cor-texto: #2e2e2e;
+    --cor-titulo: #4b2e1e;
+    --cor-subtitulo: #8b5e3c;
+
+        /* FONTES */
+    --fonte-texto: "Bebas Neue", sans-serif;
+    --fonte-titulo: "Geomerry Soft Pro-Bold N";
+}
+
+
+h1, h2{ font-family: var(--fonte-titulo) !important;
+    
+    color: var(--cor-titulo);
+    font-weight: bold;
+}
+
+h3{
+    font-family: var(--fonte-titulo) !important;
+    color: var(--cor-fundo-1);
+   
+}
+
+p{
+    font-family: var(--fonte-texto) !important; 
+    color: var(--cor-secundaria-2);
+    font-size: 20px;
+}
+a{
+    font-family: var(--fonte-texto) !important; 
+    color: var(--cor-secundaria-2);
+}
+
+
+
+/* cor fundo da logo */
 .app-sidebar{
     background-color: #000000 !important;
 }
-
+/* logo */
 .sidebar-brand{
     height: 100px;
 }
@@ -9,4 +77,75 @@
 .sidebar-brand .brand-link .brand-image{
     width: 150px;
     max-height: none;
+}
+
+/* menu de cima */
+.container-fluid{
+    font-family: var(--fonte-texto);
+    color: var(--cor-secundaria-2) !important;
+}
+
+/* cor do menu lateral */
+ .navbar .container-fluid {
+    background-color: #000000;
+ }
+
+.sidebar-wrapper{
+    background-color: #000000;
+}
+ 
+.app-main{
+    background-color: var(--cor-fundo-1);
+}
+
+.app-main .app-content-header .breadcrumb a{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-secundaria-2);
+}
+
+.breadcrumb-item.active{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-secundaria-2);
+}
+
+.sidebar-wrapper a{
+    color: var(--cor-secundaria-2);
+}
+
+/* cor das caixas */
+.text-bg-primary {
+  background-color: #8b5e3c !important;
+
+  }
+
+.text-bg-success {
+ 
+  background-color: #8b5e3c !important;
+}
+
+.text-bg-warning{
+    background-color: #8b5e3c !important;
+}
+
+.text-bg-danger{
+    background-color: #8b5e3c !important;
+}
+
+/* fim cor das caixas */
+  
+
+.small-box .small-box-icon {
+  font-size: 70px;
+  color: rgba(0, 0, 0, 0.50);
+} 
+
+/* cor footer */
+.app-footer{
+    background-color: #2e2e2e;
+    font-family: var(--fonte-texto);
+    color: var(--cor-fundo-1);
+}
+
+.float-end d-none d-sm-inline{
+    color: var(--cor-secundaria-2);
 }
