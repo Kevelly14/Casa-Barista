@@ -95,45 +95,48 @@ a{
 }
  
 .app-main{
-    background-color: var(--cor-fundo-1);
+    background-color: var(--cor-secundaria-1);
 }
 
 .app-main .app-content-header .breadcrumb a{
     font-family: var(--fonte-titulo);
-    color: var(--cor-secundaria-2);
+    color: var(--cor-fundo-1);
 }
 
 .breadcrumb-item.active{
     font-family: var(--fonte-titulo);
-    color: var(--cor-secundaria-2);
+    color: var(--cor-fundo-1);
 }
 
 .sidebar-wrapper a{
     color: var(--cor-secundaria-2);
 }
 
+
+
+
 /* cor das caixas */
 .text-bg-primary {
-  background-color: #8b5e3c !important;
+  background-color: var(--cor-titulo) !important;
 
   }
 
 .text-bg-success {
  
-  background-color: #8b5e3c !important;
+  background-color: var(--cor-titulo) !important;
 }
 
 .text-bg-warning{
-    background-color: #8b5e3c !important;
+    background-color: var(--cor-titulo) !important;
 }
 
 .text-bg-danger{
-    background-color: #8b5e3c !important;
+    background-color: var(--cor-titulo) !important;
 }
 
 /* fim cor das caixas */
   
-
+/* cor icons card */
 .small-box .small-box-icon {
   font-size: 70px;
   color: rgba(0, 0, 0, 0.50);
