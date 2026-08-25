@@ -4,9 +4,8 @@
                 <!--begin::Small Box Widget 1-->
                 <div class="small-box text-bg-primary">
                   <div class="inner">
-                    <h3>150</h3>
-
-                    <p>New Orders</p>
+                    <h3>{{ $qtdeClientes }}</h3>
+                    <p>Clientes</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -23,7 +22,7 @@
                     href="#"
                     class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
                   >
-                    More info <i class="bi bi-link-45deg"></i>
+                    Mais informações <i class="bi bi-link-45deg"></i>
                   </a>
                 </div>
                 <!--end::Small Box Widget 1-->
@@ -33,9 +32,8 @@
                 <!--begin::Small Box Widget 2-->
                 <div class="small-box text-bg-success">
                   <div class="inner">
-                    <h3>53<sup class="fs-5">%</sup></h3>
-
-                    <p>Bounce Rate</p>
+                    <h3>{{ $qtdeProdutosDestaque}}<sup class="fs-5">%</sup></h3>
+                    <p>Produtos em Destaque</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -52,7 +50,7 @@
                     href="#"
                     class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
                   >
-                    More info <i class="bi bi-link-45deg"></i>
+                    Mais informações <i class="bi bi-link-45deg"></i>
                   </a>
                 </div>
                 <!--end::Small Box Widget 2-->
@@ -62,9 +60,8 @@
                 <!--begin::Small Box Widget 3-->
                 <div class="small-box text-bg-warning">
                   <div class="inner">
-                    <h3>44</h3>
-
-                    <p>User Registrations</p>
+                    <h3>{{ number_format($valorTotalVendas, 2, ',', '.') }}</h3>
+                    <p>Valor total de Vendas</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -81,7 +78,7 @@
                     href="#"
                     class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover"
                   >
-                    More info <i class="bi bi-link-45deg"></i>
+                    Mais informações <i class="bi bi-link-45deg"></i>
                   </a>
                 </div>
                 <!--end::Small Box Widget 3-->

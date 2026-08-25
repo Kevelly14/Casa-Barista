@@ -45,36 +45,39 @@
               id="navigation"
             >
               <li class="nav-item menu-open">
-                <a href="#" class="nav-link active">
+                <a href="{{ route ('dashboard')}}" class="nav-link active">
                   <i class="nav-icon bi bi-speedometer"></i>
                   <p>
                     Dashboard
                     <i class="nav-arrow bi bi-chevron-right"></i>
                   </p>
                 </a>
-                <ul class="nav nav-treeview">
+                <ul class="nav nav-link">
                   <li class="nav-item">
-                    <a href="./index.html" class="nav-link active">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v1</p>
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-circle-fill"></i>
+                      <p>Clientes</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v2</p>
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-circle-fill"></i>
+                      <p>Usuários</p>
                     </a>
                   </li>
+                  <li class="nav-header">SITE</li>
                   <li class="nav-item">
-                    <a href="./index3.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v3</p>
+                    <a href="{{ route('admin.banner.index')}}" class="nav-link">
+                      <i class="nav-icon bi bi-circle-fill"></i>
+                      <p>
+                        Banner
+                      </p>
                     </a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="./starter.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-file-earmark"></i>
                   <p>Starter Page</p>
                 </a>
