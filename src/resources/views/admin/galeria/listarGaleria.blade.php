@@ -6,13 +6,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Banners</h1>
+                <h1 class="mb-0 fs-3">Galeria</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Banners</li>
+                    <li class="breadcrumb-item active" aria-current="page">Galeria</li>
                   </ol>
                 </nav>
               </div>
@@ -35,7 +35,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Banners cadastrados</h3>
+                        <h3 class="card-title">Fotos da galeria cadastradas</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -58,7 +58,7 @@
                           </select>
                           <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modal-add-user">
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Novo Banner
+                            Nova Galeria
                           </button>
                         </div>
                       </div>
@@ -75,7 +75,7 @@
 
                             <th>Imagem</th>
 
-                            <th>Título</th>
+                            <th>Nome</th>
 
                             <th>Status</th>
 
@@ -87,18 +87,18 @@
                           </tr>
                         </thead>
                         <tbody>
-                            @forelse($listaBanner as $banner)
+                            @forelse($listaGaleria as $galeria)
                           <tr>
                             {{--ID--}}
                             <td>
-                              {{$banner->id_banner}}
+                              {{$galeria->id_galeria}}
                             </td>
                             {{--Imagem--}}
                             <td>
-                             @if($banner->imagem_banner)
+                             @if($galeria->imagem_galeria)
                              <img 
-                                src="{{ asset('barista/assets/' . $banner->imagem_banner) }}" 
-                                alt="{{ $banner->titulo_banner }}"
+                                src="{{ asset('barista/assets/' . $galeria->imagem_galeria) }}" 
+                                alt="{{ $galeria->nome_galeria }}"
                                 class="rounded"
                                 style="
                                   width: 100px;
@@ -115,12 +115,12 @@
                             {{--Título--}}
                             <td>
                               <span class="badge text-bg-success"> 
-                                {{ $banner->titulo_banner }}
+                                {{ $galeria->nome_galeria }}
                              </span>
                             </td>
                             {{--Status--}}
                             <td>
-                                @if( $banner->status_banner === 'ATIVO')
+                                @if( $galeria->status_galeria === 'ATIVO')
                               <span class="badge text-bg-success">
                                 Ativo
                               </span>
@@ -144,7 +144,7 @@
                                 type="button" 
                                 class="btn btn-outline-danger" 
                                 data-bs-toggle="modal"
-                                 data-bs-target="#modal-delete-banner" 
+                                 data-bs-target="#modal-delete-galeria" 
                                  aria-label="Deletar"
                                  >
                                   <i class="bi bi-trash" aria-hidden="true"> </i>
@@ -158,7 +158,7 @@
                                colspan="5"
                                class="text-center py-4 text-muted"
                                >
-                                 Nenhum banner cadastrado.
+                                 Nenhuma galeria cadastrada.
                             </td>
                           </tr>
                           @endforelse
@@ -171,9 +171,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de banners:
+                      Total de galerias:
                       <strong>
-                        {{ $listaBanner-> count()}}
+                        {{ $listaGaleria-> count()}}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">
@@ -214,7 +214,7 @@
                 <div class="modal-content">
                   <form>
                     <div class="modal-header">
-                      <h5 class="modal-title" id="modal-add-user-label">Add new banner</h5>
+                      <h5 class="modal-title" id="modal-add-user-label">Add new galeria</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -247,7 +247,7 @@
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                         Cancel
                       </button>
-                      <button type="submit" class="btn btn-primary">Create banner</button>
+                      <button type="submit" class="btn btn-primary">Create galeria</button>
                     </div>
                   </form>
                 </div>
@@ -260,7 +260,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modal-delete-user-label">Delete banner</h5>
+                    <h5 class="modal-title" id="modal-delete-user-label">Delete galeria</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
@@ -274,7 +274,7 @@
                       Cancel
                     </button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                      Delete banner
+                      Delete galeria
                     </button>
                   </div>
                 </div>

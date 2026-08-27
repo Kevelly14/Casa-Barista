@@ -87,18 +87,18 @@
                           </tr>
                         </thead>
                         <tbody>
-                            @forelse($listaBanner as $banner)
+                            @forelse($produto as $produto)
                           <tr>
                             {{--ID--}}
                             <td>
-                              {{$banner->id_banner}}
+                              {{$produtor->id_produto}}
                             </td>
                             {{--Imagem--}}
                             <td>
-                             @if($banner->imagem_banner)
+                             @if($produto->imagem_produto)
                              <img 
-                                src="{{ asset('barista/assets/' . $banner->imagem_banner) }}" 
-                                alt="{{ $banner->titulo_banner }}"
+                                src="{{ asset('barista/assets/' . $produto->imagem_produto) }}" 
+                                alt="{{ $produto->tnome_produto }}"
                                 class="rounded"
                                 style="
                                   width: 100px;
@@ -115,12 +115,12 @@
                             {{--Título--}}
                             <td>
                               <span class="badge text-bg-success"> 
-                                {{ $banner->titulo_banner }}
+                                {{ $produto->nome_produto }}
                              </span>
                             </td>
                             {{--Status--}}
                             <td>
-                                @if( $banner->status_banner === 'ATIVO')
+                                @if( $produto->status_produto === 'ATIVO')
                               <span class="badge text-bg-success">
                                 Ativo
                               </span>
@@ -144,7 +144,7 @@
                                 type="button" 
                                 class="btn btn-outline-danger" 
                                 data-bs-toggle="modal"
-                                 data-bs-target="#modal-delete-banner" 
+                                 data-bs-target="#modal-delete-produto" 
                                  aria-label="Deletar"
                                  >
                                   <i class="bi bi-trash" aria-hidden="true"> </i>
@@ -158,7 +158,7 @@
                                colspan="5"
                                class="text-center py-4 text-muted"
                                >
-                                 Nenhum banner cadastrado.
+                                 Nenhum produto cadastrado.
                             </td>
                           </tr>
                           @endforelse
@@ -173,7 +173,7 @@
                     <div class="float-start pt-1 fs-7 text-body-secondary">
                       Total de banners:
                       <strong>
-                        {{ $listaBanner-> count()}}
+                        {{ $produto-> count()}}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">
@@ -247,7 +247,7 @@
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                         Cancel
                       </button>
-                      <button type="submit" class="btn btn-primary">Create banner</button>
+                      <button type="submit" class="btn btn-primary">Create produto</button>
                     </div>
                   </form>
                 </div>
@@ -260,7 +260,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modal-delete-user-label">Delete banner</h5>
+                    <h5 class="modal-title" id="modal-delete-user-label">Delete produto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
@@ -274,7 +274,7 @@
                       Cancel
                     </button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                      Delete banner
+                      Delete produto
                     </button>
                   </div>
                 </div>
