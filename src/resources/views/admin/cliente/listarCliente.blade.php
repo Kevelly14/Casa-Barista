@@ -6,13 +6,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Produtos</h1>
+                <h1 class="mb-0 fs-3">Clientes</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Produtos</li>
+                    <li class="breadcrumb-item active" aria-current="page">Clientes</li>
                   </ol>
                 </nav>
               </div>
@@ -34,10 +34,9 @@
                   <!--begin::Card Header-->
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
-                      <div class="col-12 col-md-4">
-                        <h3 class="card-title">Produtos cadastrados</h3>
-                      </div>
+                     
                       <div class="col-12 col-md-8">
+                         <h3 class="card-title">Clientes cadastrados</h3>
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
                           <div class="input-group input-group-sm w-auto">
                             <span class="input-group-text">
@@ -47,8 +46,8 @@
                              type="search" 
                              id="banner-search"
                               class="form-control"
-                               placeholder="Pesquisar produto" 
-                               aria-label="Pesquisar produto" 
+                               placeholder="Pesquisar clientes" 
+                               aria-label="Pesquisar clientes" 
                                style="width: 180px">
                           </div>
                           <select id="user-role-filter" class="form-select form-select-sm w-auto" aria-label="Filter by role">
@@ -58,7 +57,7 @@
                           </select>
                           <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modal-add-user">
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Novo Produto
+                            Novo Cliente
                           </button>
                         </div>
                       </div>
@@ -75,13 +74,11 @@
 
                             <th>Nome</th>
 
-                            <th>Descrição longa</th>
+                            <th>Email</th>
 
-                            <th>Valor</th>
+                            <th>Senha</th>
 
-                            <th>Imagem</th>
-
-                            <th>Destaque</th>
+                            <th>Foto</th>
 
                             <th>Status</th>
 
@@ -93,39 +90,40 @@
                           </tr>
                         </thead>
                         <tbody>
-                            @forelse($produtos as $produto)
+                            @forelse($clientes as $cliente)
                           <tr>
                             {{--ID--}}
                             <td>
-                              {{$produto->id_produto}}
+                              {{$cliente->id_cliente}}
                             </td>
                             
-                            </td>
-                            {{--Título--}}
+                            {{--Nome--}}
                             <td>
                               <span class="badge text-bg-success"> 
-                                {{ $produto->nome_produto }}
+                                {{ $cliente->nome_cliente }}
                              </span>
                             </td>
-                            {{--Descrição longa--}}
+
+                            {{--Email--}}
                             <td>
-                              <span  class="badge text-bg-success">
-                                {{ $produto->descricacao_longa_produto}}
-                              </span>
-                            </td>
-                            {{--Valor--}}
-                              <td>
-                              <span  class="badge text-bg-success">
-                                {{ $produto->valor_produto}}
-                              </span>
+                              <span class="badge text-bg-success"> 
+                                {{ $cliente->email_cliente }}
+                             </span>
                             </td>
 
-                            {{--Imagem--}}
+                            {{--Senha--}}
                             <td>
-                             @if($produto->imagem_produto)
+                              <span class="badge text-bg-success"> 
+                                {{ $cliente->senha_cliente }}
+                             </span>
+                            </td>
+
+                            {{--Foto--}}
+                            <td>
+                             @if($cliente->foto_cliente)
                              <img 
-                                src="{{ asset('barista/assets/' . $produto->imagem_produto) }}" 
-                                alt="{{ $produto->nome_produto }}"
+                                src="{{ asset('barista/assets/' . $cliente->foto_cliente) }}" 
+                                alt="{{ $cliente->nome_cliente }}"
                                 class="rounded"
                                 style="
                                   width: 100px;
@@ -138,19 +136,11 @@
                                     Sem imagem
                                 </span>
                              @endif
-
-                            {{--Destaque Produto--}}
-                             <td>
-                              <span  class="badge text-bg-success">
-                                {{ $produto->destaque_produto}}
-                              </span>
                             </td>
-                          
-
 
                             {{--Status--}}
                             <td>
-                                @if( $produto->status_produto === 'ATIVO')
+                                @if( $cliente->status_cliente === 'ATIVO')
                               <span class="badge text-bg-success">
                                 Ativo
                               </span>
@@ -174,7 +164,7 @@
                                 type="button" 
                                 class="btn btn-outline-danger" 
                                 data-bs-toggle="modal"
-                                 data-bs-target="#modal-delete-produto" 
+                                 data-bs-target="#modal-delete-categoria" 
                                  aria-label="Deletar"
                                  >
                                   <i class="bi bi-trash" aria-hidden="true"> </i>
@@ -188,7 +178,7 @@
                                colspan="5"
                                class="text-center py-4 text-muted"
                                >
-                                 Nenhum produto cadastrado.
+                                 Nenhum cliente cadastrado.
                             </td>
                           </tr>
                           @endforelse
@@ -201,9 +191,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de produtos:
+                      Total de clientes:
                       <strong>
-                        {{ $produtos-> count()}}
+                        {{ $clientes-> count()}}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">
@@ -244,7 +234,7 @@
                 <div class="modal-content">
                   <form>
                     <div class="modal-header">
-                      <h5 class="modal-title" id="modal-add-user-label">Add new produtos</h5>
+                      <h5 class="modal-title" id="modal-add-user-label">Add new cliente</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -277,7 +267,7 @@
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                         Cancel
                       </button>
-                      <button type="submit" class="btn btn-primary">Create produto</button>
+                      <button type="submit" class="btn btn-primary">Create cliente</button>
                     </div>
                   </form>
                 </div>
@@ -290,7 +280,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modal-delete-user-label">Delete produto</h5>
+                    <h5 class="modal-title" id="modal-delete-user-label">Delete cliente</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
@@ -304,7 +294,7 @@
                       Cancel
                     </button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                      Delete produto
+                      Delete cliente
                     </button>
                   </div>
                 </div>

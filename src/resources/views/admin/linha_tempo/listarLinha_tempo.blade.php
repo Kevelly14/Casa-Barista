@@ -6,13 +6,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Produtos</h1>
+                <h1 class="mb-0 fs-3">Linha do Tempo</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Produtos</li>
+                    <li class="breadcrumb-item active" aria-current="page">Linha do Tempo</li>
                   </ol>
                 </nav>
               </div>
@@ -34,10 +34,9 @@
                   <!--begin::Card Header-->
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
-                      <div class="col-12 col-md-4">
-                        <h3 class="card-title">Produtos cadastrados</h3>
-                      </div>
+                     
                       <div class="col-12 col-md-8">
+                         <h3 class="card-title">Linhas do tempo cadastradas</h3>
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
                           <div class="input-group input-group-sm w-auto">
                             <span class="input-group-text">
@@ -47,18 +46,18 @@
                              type="search" 
                              id="banner-search"
                               class="form-control"
-                               placeholder="Pesquisar produto" 
-                               aria-label="Pesquisar produto" 
+                               placeholder="Pesquisar linha do tempo" 
+                               aria-label="Pesquisar linha do tempo" 
                                style="width: 180px">
                           </div>
                           <select id="user-role-filter" class="form-select form-select-sm w-auto" aria-label="Filter by role">
                             <option value="all" selected="">Todos</option>
-                            <option value="aativo">Ativos</option>
-                            <option value="inativo">Inativos</option>
+                            <option value="aativo">Aprovados</option>
+                            <option value="inativo">Pendentes</option>
                           </select>
                           <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modal-add-user">
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Novo Produto
+                            Nova Linha do Tempo
                           </button>
                         </div>
                       </div>
@@ -73,15 +72,11 @@
                         <tr>
                             <th>Código</th>
 
-                            <th>Nome</th>
+                            <th>Título</th>
 
-                            <th>Descrição longa</th>
+                            <th>Ano</th>
 
-                            <th>Valor</th>
-
-                            <th>Imagem</th>
-
-                            <th>Destaque</th>
+                            <th>Descrição</th>
 
                             <th>Status</th>
 
@@ -93,70 +88,46 @@
                           </tr>
                         </thead>
                         <tbody>
-                            @forelse($produtos as $produto)
+                            @forelse($LinhadoTempo as $linha_tempo)
                           <tr>
                             {{--ID--}}
                             <td>
-                              {{$produto->id_produto}}
+                              {{$linha_tempo->id_linha_tempo}}
                             </td>
+                          
                             
                             </td>
                             {{--Título--}}
                             <td>
                               <span class="badge text-bg-success"> 
-                                {{ $produto->nome_produto }}
+                                {{ $linha_tempo->titulo_linha_tempo }}
                              </span>
                             </td>
-                            {{--Descrição longa--}}
+
+                            {{--Ano--}}
                             <td>
-                              <span  class="badge text-bg-success">
-                                {{ $produto->descricacao_longa_produto}}
-                              </span>
-                            </td>
-                            {{--Valor--}}
-                              <td>
-                              <span  class="badge text-bg-success">
-                                {{ $produto->valor_produto}}
-                              </span>
+                              <span class="badge text-bg-success"> 
+                                {{ $linha_tempo->ano_linha_tempo }}
+                             </span>
                             </td>
 
-                            {{--Imagem--}}
+                            {{--Descrição--}}
                             <td>
-                             @if($produto->imagem_produto)
-                             <img 
-                                src="{{ asset('barista/assets/' . $produto->imagem_produto) }}" 
-                                alt="{{ $produto->nome_produto }}"
-                                class="rounded"
-                                style="
-                                  width: 100px;
-                                  height: 60px;
-                                  object-fit: cover;
-                                "
-                                >
-                             @else
-                                <span class="text-muted">
-                                    Sem imagem
-                                </span>
-                             @endif
-
-                            {{--Destaque Produto--}}
-                             <td>
-                              <span  class="badge text-bg-success">
-                                {{ $produto->destaque_produto}}
-                              </span>
+                              <span class="badge text-bg-success"> 
+                                {{ $linha_tempo->descricao_linha_tempo }}
+                             </span>
                             </td>
-                          
-
+                           
 
                             {{--Status--}}
                             <td>
-                                @if( $produto->status_produto === 'ATIVO')
+                                @if( $linha_tempo->status_linha_tempo === 'ATIVO')
                               <span class="badge text-bg-success">
                                 Ativo
                               </span>
                               @else
                               <span class="badge text-bg-warning">
-                                Inativo
+                                inativo
                               </span>
                               @endif
                             </td>
@@ -174,7 +145,7 @@
                                 type="button" 
                                 class="btn btn-outline-danger" 
                                 data-bs-toggle="modal"
-                                 data-bs-target="#modal-delete-produto" 
+                                 data-bs-target="#modal-delete-depoimento" 
                                  aria-label="Deletar"
                                  >
                                   <i class="bi bi-trash" aria-hidden="true"> </i>
@@ -188,7 +159,7 @@
                                colspan="5"
                                class="text-center py-4 text-muted"
                                >
-                                 Nenhum produto cadastrado.
+                                 Nenhuma linha do tempo cadastrada.
                             </td>
                           </tr>
                           @endforelse
@@ -201,9 +172,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de produtos:
+                      Total de linhas do tempo:
                       <strong>
-                        {{ $produtos-> count()}}
+                        {{ $LinhadoTempo-> count()}}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">
@@ -244,7 +215,7 @@
                 <div class="modal-content">
                   <form>
                     <div class="modal-header">
-                      <h5 class="modal-title" id="modal-add-user-label">Add new produtos</h5>
+                      <h5 class="modal-title" id="modal-add-user-label">Add new linha do tempo</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -277,7 +248,7 @@
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                         Cancel
                       </button>
-                      <button type="submit" class="btn btn-primary">Create produto</button>
+                      <button type="submit" class="btn btn-primary">Create linha do tempo</button>
                     </div>
                   </form>
                 </div>
@@ -290,7 +261,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modal-delete-user-label">Delete produto</h5>
+                    <h5 class="modal-title" id="modal-delete-user-label">Delete linha do tempo</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
@@ -304,7 +275,7 @@
                       Cancel
                     </button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                      Delete produto
+                      Delete linha do tempo
                     </button>
                   </div>
                 </div>

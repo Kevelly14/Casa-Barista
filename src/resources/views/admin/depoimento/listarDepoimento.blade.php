@@ -6,13 +6,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Galeria</h1>
+                <h1 class="mb-0 fs-3">Depoimentos</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Galeria</li>
+                    <li class="breadcrumb-item active" aria-current="page">Depoimentos</li>
                   </ol>
                 </nav>
               </div>
@@ -34,10 +34,9 @@
                   <!--begin::Card Header-->
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
-                      <div class="col-12 col-md-4">
-                        <h3 class="card-title">Fotos da galeria cadastradas</h3>
-                      </div>
+                     
                       <div class="col-12 col-md-8">
+                         <h3 class="card-title">Depoimentos cadastrados</h3>
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
                           <div class="input-group input-group-sm w-auto">
                             <span class="input-group-text">
@@ -47,18 +46,18 @@
                              type="search" 
                              id="banner-search"
                               class="form-control"
-                               placeholder="Pesquisar banners" 
-                               aria-label="Pesquisar banners" 
+                               placeholder="Pesquisar depoimentos" 
+                               aria-label="Pesquisar depoimentos" 
                                style="width: 180px">
                           </div>
                           <select id="user-role-filter" class="form-select form-select-sm w-auto" aria-label="Filter by role">
                             <option value="all" selected="">Todos</option>
-                            <option value="aativo">Ativos</option>
-                            <option value="inativo">Inativos</option>
+                            <option value="aativo">Aprovados</option>
+                            <option value="inativo">Pendentes</option>
                           </select>
                           <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modal-add-user">
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Nova Galeria
+                            Novo Depoimento
                           </button>
                         </div>
                       </div>
@@ -124,13 +123,13 @@
 
                             {{--Status--}}
                             <td>
-                                @if( $depoimento->status_depoimento === 'ATIVO')
+                                @if( $depoimento->status_depoimento === 'APROVADO')
                               <span class="badge text-bg-success">
-                                Ativo
+                                Aprovado
                               </span>
                               @else
                               <span class="badge text-bg-warning">
-                                Inativo
+                                Pendente
                               </span>
                               @endif
                             </td>
@@ -175,7 +174,7 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de galerias:
+                      Total de depoimentos:
                       <strong>
                         {{ $listaDepo-> count()}}
                       </strong>

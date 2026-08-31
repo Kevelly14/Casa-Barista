@@ -6,13 +6,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Galeria</h1>
+                <h1 class="mb-0 fs-3">Galerias</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Galeria</li>
+                    <li class="breadcrumb-item active" aria-current="page">Galerias</li>
                   </ol>
                 </nav>
               </div>
@@ -35,7 +35,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Fotos da galeria cadastradas</h3>
+                        <h3 class="card-title">Galerias cadastradas</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -47,8 +47,8 @@
                              type="search" 
                              id="banner-search"
                               class="form-control"
-                               placeholder="Pesquisar banners" 
-                               aria-label="Pesquisar banners" 
+                               placeholder="Pesquisar galeria" 
+                               aria-label="Pesquisar galeria" 
                                style="width: 180px">
                           </div>
                           <select id="user-role-filter" class="form-select form-select-sm w-auto" aria-label="Filter by role">

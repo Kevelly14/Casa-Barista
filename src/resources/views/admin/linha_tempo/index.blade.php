@@ -2,6 +2,6 @@
 
 @section('content')
 
-   @include('admin.produto.listarProduto')
+   @include('admin.linha_tempo.listarLinha_tempo')
 
 @endsection

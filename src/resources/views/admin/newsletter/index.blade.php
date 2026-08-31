@@ -2,6 +2,6 @@
 
 @section('content')
 
-   @include('admin.produto.listarProduto')
+   @include('admin.newsletter.listarNews')
 
 @endsection

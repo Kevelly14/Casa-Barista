@@ -12,9 +12,9 @@ class ProdutoController extends Controller{
 // Listar todos os produtos cadastrados
   public function index() 
   {
-    $produto = Produto::orderByDesc('id_produto')->get();
+    $produtos = Produto::orderByDesc('id_produto')->get();
 
-    return view('admin.produto.index');
+    return view('admin.produto.index', compact('produtos'));
 
   }
 

@@ -43,7 +43,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./generate/theme.html" class="nav-link">
+                <a href="{{ route('admin.categoria.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-circle-fill"></i>
                   <p>Categorias</p>
                 </a>
@@ -56,13 +56,13 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="{{ route('admin.cliente.index') }}" class="nav-link">
                     <i class="nav-icon bi bi-circle-fill"></i>
                     <p class="text">Clientes</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="{{ route('admin.usuario.index') }}" class="nav-link">
                     <i class="nav-icon bi bi-circle-fill"></i>
                     <p class="text">Usuários</p>
                   </a>
@@ -91,13 +91,13 @@
                 </a>                
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.linha_tempo.index')}}" class="nav-link">
                   <i class="nav-icon bi bi-circle-fill"></i>
                   <p>Linha do tempo</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.newsletter.index')}}" class="nav-link">
                   <i class="nav-icon bi bi-circle-fill"></i>
                   <p>
                     Newsletter                    
