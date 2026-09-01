@@ -83,6 +83,8 @@
 
                             <th>Destaque</th>
 
+                             <th>Categoria</th>
+
                             <th>Status</th>
 
 
@@ -110,7 +112,7 @@
                             {{--Descrição longa--}}
                             <td>
                               <span  class="badge text-bg-success">
-                                {{ $produto->descricacao_longa_produto}}
+                                {{ $produto->descricao_curta_produto}}
                               </span>
                             </td>
                             {{--Valor--}}
@@ -141,10 +143,22 @@
 
                             {{--Destaque Produto--}}
                              <td>
-                              <span  class="badge text-bg-success">
-                                {{ $produto->destaque_produto}}
+                                  @if( $produto->destaque_produto == 1)
+                              <span class="badge text-bg-success">
+                                Produto em destaque
                               </span>
+                              @else
+                              <span class="badge text-bg-warning">
+                                
+                              </span>
+                              @endif
                             </td>
+
+                            {{--Categoria--}}
+                             <td>
+                              <span class="badge text-bg-success"> 
+                                {{ $produto->categoria->nome_categoria }}
+                             </span>
                           
 
 

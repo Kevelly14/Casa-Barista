@@ -16,7 +16,7 @@ const UPDATE_AT = 'data_atualizacao_linha_tempo';
 
 // fillable é os campos q pode alterar 
 protected $fillable = [
-    'tiutlo_linha_tempo',
+    'titulo_linha_tempo',
     'ano_linha_tempo',
     'descricao_linha_tempo',
     'status_linha_tempo',
